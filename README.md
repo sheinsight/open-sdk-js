@@ -12,7 +12,7 @@ A comprehensive TypeScript SDK for SHEIN Open API integration, providing HTTP re
 ## Features
 
 - 🌐 **HTTP Request Client** - Built-in GET/POST methods with axios for excellent cross-platform compatibility
-- 📁 **Flexible Configuration** - JavaScript-based config files with environment variable support
+- 📁 **Flexible Configuration** - Simple object-based configuration
 - 🔓 **Data Decryption** - Methods for decrypting event data, responses, and secret keys
 - 📝 **Full TypeScript Support** - Complete type definitions for better development experience
 - 🌍 **Node.js Optimized** - Designed specifically for server-side applications
@@ -48,7 +48,7 @@ const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByT
 
 // Initialize with configuration object
 const openRequest = new OpenRequest({
-    domain: "https://openapi.sheincorp.com",
+    domain: "your-api-domain",
     openKeyId: "your-open-key-id",
     secretKey: "your-secret-key",
     appid: "your-app-id",
@@ -56,23 +56,23 @@ const openRequest = new OpenRequest({
 });
 
 // Make GET request with query parameters
-const response = await openRequest.get('/open-api/goods-brand/whole-brands', {
-  query: { page_num: 1, page_size: 10 }
+const response = await openRequest.get('/api/endpoint', {
+  query: { page: 1, size: 10 }
 });
 console.log(response);
 
 // Make POST request with body
-const result = await openRequest.post('/open-api/openapi-business-backend/product/full-detail', {
+const result = await openRequest.post('/api/endpoint', {
   body: {
-    skuCodes: ["your-sku-code"],
-    language: "en",
+    param1: "value1",
+    param2: "value2",
   }
 });
 console.log(result);
 
 // Use getByToken for authentication
 const authResult = await getByToken(
-  { domain: "https://openapi.sheincorp.com" },
+  { domain: "your-api-domain" },
   { tempToken: "your-temp-token" }
 );
 console.log(authResult);
@@ -85,7 +85,7 @@ import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptRe
 
 // Configuration interface
 const config: OpenRequestConfig = {
-    domain: "https://openapi.sheincorp.com",
+    domain: "your-api-domain",
     openKeyId: "your-open-key-id",
     secretKey: "your-secret-key",
     appid: "your-app-id",
@@ -93,13 +93,13 @@ const config: OpenRequestConfig = {
 };
 
 // API response interfaces
-interface BrandListResponse {
+interface ApiResponse {
     code: string;
     msg?: string;
     info?: {
-        brands?: Array<{
-            brandId: number;
-            brandName: string;
+        data?: Array<{
+            id: number;
+            name: string;
         }>;
         total?: number;
     };
@@ -108,19 +108,19 @@ interface BrandListResponse {
 const openRequest = new OpenRequest(config);
 
 // Typed GET request
-const brands = await openRequest.get<BrandListResponse>('/open-api/goods-brand/whole-brands', {
-  query: { page_num: "1", page_size: "10" }
+const response = await openRequest.get<ApiResponse>('/api/endpoint', {
+  query: { page: "1", size: "10" }
 });
-console.log(brands.info?.brands); // Type-safe access
+console.log(response.info?.data); // Type-safe access
 
 // Typed POST request
-const productDetails = await openRequest.post('/open-api/openapi-business-backend/product/full-detail', {
+const result = await openRequest.post('/api/endpoint', {
   body: {
-    skuCodes: ["your-sku-code"],
-    language: "en"
+    param1: "value1",
+    param2: "value2"
   }
 });
-console.log(productDetails);
+console.log(result);
 
 // Data decryption
 const decryptedData: string = decryptEventData("encrypted-data", "secret-key");
@@ -194,8 +194,8 @@ async get<T = any>(
 **Example:**
 
 ```javascript
-const response = await openRequest.get('/open-api/goods-brand/whole-brands', {
-  query: { page_num: 1, page_size: 10 },
+const response = await openRequest.get('/api/endpoint', {
+  query: { page: 1, size: 10 },
   headers: { 'Authorization': 'Bearer token' }
 });
 ```
@@ -222,10 +222,10 @@ async post<T = any>(
 **Example:**
 
 ```javascript
-const response = await openRequest.post('/open-api/openapi-business-backend/product/full-detail', {
+const response = await openRequest.post('/api/endpoint', {
   body: {
-    skuCodes: ["your-sku-code"],
-    language: "en"
+    param1: "value1",
+    param2: "value2"
   },
   headers: { 'Content-Type': 'application/json' }
 });
@@ -242,8 +242,8 @@ getConfig(): OpenRequestConfig
 **Example:**
 
 ```javascript
-const config = client.getConfig();
-console.log(config.domain); // "https://api.example.com"
+const config = openRequest.getConfig();
+console.log(config.domain); // "your-api-domain"
 ```
 
 #### Configuration Object
@@ -372,7 +372,7 @@ async function example() {
   try {
     // Initialize client with configuration
     const openRequest = new OpenRequest({
-      domain: "https://openapi.sheincorp.com",
+      domain: "your-api-domain",
       openKeyId: "your-open-key-id",
       secretKey: "your-secret-key", 
       appid: "your-app-id",
@@ -383,26 +383,26 @@ async function example() {
     const config = openRequest.getConfig();
     console.log('Using API domain:', config.domain);
     
-    // Get brands list
-    const brands = await openRequest.get('/open-api/goods-brand/whole-brands', {
-      query: { page_num: 1, page_size: 10 }
+    // Get data list
+    const dataList = await openRequest.get('/api/list', {
+      query: { page: 1, size: 10 }
     });
     
-    console.log('Brands response:', brands);
+    console.log('Data list response:', dataList);
     
-    // Get product details
-    const productDetails = await openRequest.post('/open-api/openapi-business-backend/product/full-detail', {
+    // Create or update data
+    const result = await openRequest.post('/api/data', {
       body: {
-        skuCodes: ["your-sku-code"],
-        language: "en"
+        name: "example",
+        type: "sample"
       }
     });
     
-    console.log('Product details:', productDetails);
+    console.log('Operation result:', result);
     
     // Use getByToken for authentication
     const authResult = await getByToken(
-      { domain: "https://openapi.sheincorp.com" },
+      { domain: "your-api-domain" },
       { tempToken: "your-temp-token" }
     );
     

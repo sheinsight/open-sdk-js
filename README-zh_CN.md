@@ -12,7 +12,7 @@
 ## 特性
 
 - 🌐 **HTTP 请求客户端** - 内置 GET/POST 方法，使用 axios 提供出色的跨平台兼容性
-- 📁 **灵活配置** - 基于 JavaScript 的配置文件，支持环境变量
+- 📁 **灵活配置** - 支持对象配置，简单易用
 - 🔓 **数据解密** - 用于解密事件数据、响应和密钥的方法
 - 📝 **完整 TypeScript 支持** - 完整的类型定义，提供更好的开发体验
 - 🌍 **Node.js 优化** - 专为服务端应用设计
@@ -48,7 +48,7 @@ const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByT
 
 // 使用配置对象初始化
 const openRequest = new OpenRequest({
-    domain: "https://openapi.sheincorp.com",
+    domain: "your-api-domain",
     openKeyId: "your-open-key-id",
     secretKey: "your-secret-key",
     appid: "your-app-id",
@@ -56,61 +56,74 @@ const openRequest = new OpenRequest({
 });
 
 // 发送 GET 请求
-const response = await openRequest.get('/open-api/goods-brand/whole-brands', {
-  query: { page_num: 1, page_size: 10 }
+const response = await openRequest.get('/api/endpoint', {
+  query: { page: 1, size: 10 }
 });
 console.log(response);
 
 // 发送 POST 请求
-const result = await openRequest.post('/open-api/openapi-business-backend/product/full-detail', {
+const result = await openRequest.post('/api/endpoint', {
   body: {
-    skuCodes: ["your-sku-code"],
-    language: "zh",
+    param1: "value1",
+    param2: "value2",
   }
 });
 console.log(result);
 
 // 使用 getByToken 进行身份验证
 const authResult = await getByToken(
-  { domain: "https://openapi.sheincorp.com" },
+  { domain: "your-api-domain" },
   { tempToken: "your-temp-token" }
 );
 console.log(authResult);
 ### TypeScript 用法
 
 ```typescript
-import { OpenRequest, RequestResponse, OpenRequestConfig } from '@sheinsight/open-sdk-js';
+import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptResponse, decryptSecretKey } from '@sheinsight/open-sdk-js';
 
-interface User {
-  id: number;
-  name: string;
-  email: string;
+// 配置接口定义
+const config: OpenRequestConfig = {
+    domain: "your-api-domain",
+    openKeyId: "your-open-key-id",
+    secretKey: "your-secret-key",
+    appid: "your-app-id",
+    appSecretKey: "your-app-secret-key",
+};
+
+// API 响应接口
+interface ApiResponse {
+    code: string;
+    msg?: string;
+    info?: {
+        data?: Array<{
+            id: number;
+            name: string;
+        }>;
+        total?: number;
+    };
 }
 
-interface ApiResponse<T> {
-  success: boolean;
-  data: T;
-  message: string;
-}
+const openRequest = new OpenRequest(config);
 
-const client = new OpenRequest();
-
-// 类型安全的 GET 请求，支持对象参数
-const users = await client.get<ApiResponse<User[]>>('/api/users', {
-  query: { page: '1', limit: '10' }, 
-  headers: { 'Authorization': 'Bearer token' }
+// 类型安全的 GET 请求
+const response = await openRequest.get<ApiResponse>('/api/endpoint', {
+  query: { page: "1", size: "10" }
 });
-console.log(users.data.data); // 类型安全访问
+console.log(response.info?.data); // 类型安全访问
 
-// 类型安全的 POST 请求，支持请求体和请求头
-const newUser = await client.post<ApiResponse<User>>('/api/users', {
+// 类型安全的 POST 请求
+const result = await openRequest.post('/api/endpoint', {
   body: {
-    name: 'Jane Doe',
-    email: 'jane@example.com'
-  },
-  headers: { 'Content-Type': 'application/json' }
+    param1: "value1",
+    param2: "value2"
+  }
 });
-console.log(newUser.data.data.id); // 类型安全访问
+console.log(result);
+
+// 数据解密
+const decryptedData: string = decryptEventData("encrypted-data", "secret-key");
+const decryptedResponse: string = decryptResponse("encrypted-response", "password");
+const decryptedKey: string = decryptSecretKey("encrypted-key", "app-secret-key");
 ```
 
 ## Axios 集成
