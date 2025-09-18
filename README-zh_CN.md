@@ -156,45 +156,11 @@ axiosInstance.interceptors.request.use(config => {
 });
 ```
 
-## 配置
-
-### 配置文件格式
-
-SDK 使用 JavaScript 配置文件以获得最大的灵活性：
-
-#### 基本配置
-
-```javascript
-// shein-open.config.js
-module.exports = {
-  domain: "https://openapi.sheincorp.com",
-  openKeyId: "your-open-key-id",
-  secretKey: "your-secret-key",
-  appid: "your-app-id",
-  appSecretKey: "your-app-secret-key"
-};
-```
-
-#### 使用环境变量的高级配置
-
-```javascript
-// shein-open.config.js
-module.exports = {
-  domain: process.env.SHEIN_API_DOMAIN || "https://openapi.sheincorp.com",
-  openKeyId: process.env.SHEIN_OPEN_KEY_ID,
-  secretKey: process.env.SHEIN_SECRET_KEY,
-  appid: process.env.SHEIN_APP_ID,
-  appSecretKey: process.env.SHEIN_APP_SECRET_KEY
-};
-```
-
 #### 构造函数
 
 ```typescript
 new OpenRequest(configPath?: string)
 ```
-
-- `configPath` (可选): 配置文件路径。默认为 `./shein-open.config.js`
 
 #### 方法
 
