@@ -1,0 +1,59 @@
+name: Release Please
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Release Please
+        uses: google-github-actions/release-please-action@v4
+        id: release
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release-type: node
+          package-name: '@sheinsight/open-sdk-js'
+
+      - name: Checkout code
+        if: steps.release.outputs.release_created
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        if: steps.release.outputs.release_created
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Setup Node.js
+        if: steps.release.outputs.release_created
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18.x
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        if: steps.release.outputs.release_created
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        if: steps.release.outputs.release_created
+        run: pnpm run build
+
+      - name: Run tests
+        if: steps.release.outputs.release_created
+        run: pnpm test
+
+      - name: Publish to NPM
+        if: steps.release.outputs.release_created
+        run: pnpm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
