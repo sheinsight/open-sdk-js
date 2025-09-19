@@ -474,9 +474,9 @@ interface IGetByToken {
 
 This package provides multiple build formats:
 
-- **`dist/index.js`** - CommonJS bundle (default)
-- **`dist/index.esm.js`** - ES Module bundle
-- **`dist/index.umd.js`** - UMD bundle for browsers
+- **`lib/index.js`** - CommonJS bundle (default)
+- **`lib/index.esm.js`** - ES Module bundle
+- **`lib/index.umd.js`** - UMD bundle for browsers
 - **`lib/`** - Individual CommonJS modules for tree-shaking
 
 ## Browser Support

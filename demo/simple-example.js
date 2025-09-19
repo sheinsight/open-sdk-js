@@ -1,4 +1,4 @@
-const { decryptEventData, decryptResponse, decryptSecretKey, OpenRequest, getByToken } = require('../dist/index.js');
+const { decryptEventData, decryptResponse, decryptSecretKey, OpenRequest, getByToken } = require('../lib/index.js');
 
 // 初始化 OpenRequest 实例
 // 🚨 WARNING: This is a TEST secretKey, do NOT use it in production! 🚨

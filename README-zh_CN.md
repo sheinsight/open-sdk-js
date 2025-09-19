@@ -452,10 +452,9 @@ interface IGetByToken {
 
 此包提供多种构建格式：
 
-- **`dist/index.js`** - CommonJS 包 (默认)
-- **`dist/index.esm.js`** - ES Module 包
-- **`dist/index.umd.js`** - UMD 包用于浏览器
-- **`lib/`** - 单独的 CommonJS 模块用于 tree-shaking
+- **`lib/index.js`** - CommonJS 包 (默认)
+- **`lib/index.esm.js`** - ES Module 包
+- **`lib/index.umd.js`** - UMD 包用于浏览器
 
 ## 浏览器支持
 

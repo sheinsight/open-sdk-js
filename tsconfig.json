@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "declaration": true,
     "declarationMap": true,
-    "outDir": "./dist",
+    "outDir": "./lib",
     "rootDir": "./src",
     "strict": true,
     "noImplicitAny": true,
@@ -23,13 +23,6 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "include": [
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "tests",
-    "demo"
-  ]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "lib", "tests", "demo"]
 }

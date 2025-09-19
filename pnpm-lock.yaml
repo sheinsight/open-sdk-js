@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@types/crypto-js':
-    specifier: 4.2.2
-    version: 4.2.2
   axios:
     specifier: 1.12.2
     version: 1.12.2
@@ -31,6 +28,9 @@ devDependencies:
   '@rollup/plugin-typescript':
     specifier: ^12.1.4
     version: 12.1.4(rollup@4.50.1)(tslib@2.8.1)(typescript@5.9.2)
+  '@types/crypto-js':
+    specifier: 4.2.2
+    version: 4.2.2
   '@types/jest':
     specifier: ^29.5.14
     version: 29.5.14
@@ -1109,7 +1109,7 @@ packages:
 
   /@types/crypto-js@4.2.2:
     resolution: {integrity: sha512-sDOLlVbHhXpAUAL0YHDUUwDZf3iN4Bwi4W6a0W0b+QcAezUbRtH4FVb+9J4h+XFPW7l/gQ9F8qC7P+Ec4k8QVQ==}
-    dev: false
+    dev: true
 
   /@types/estree@1.0.8:
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
