@@ -1,7 +1,7 @@
 {
   "name": "@sheinsight/open-sdk-js",
   "version": "1.0.0",
-  "description": "A TypeScript SDK for generating Shein API signatures",
+  "description": "A TypeScript SDK for Shein API Tools",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
