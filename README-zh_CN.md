@@ -1,8 +1,8 @@
 # Shein Open SDK
 
-[![npm version](https://badge.fury.io/js/shein-open-sdk-js.svg)](https://badge.fury.io/js/shein-open-sdk-js)
+[![npm version](https://badge.fury.io/js/@shined/open-sdk-js.svg)](https://badge.fury.io/js/@shined/open-sdk-js)
 [![CI](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml/badge.svg)](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/your-username/shein-open-sdk-js/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/shein-open-sdk-js)
+[![codecov](https://codecov.io/gh/your-username/@shined/open-sdk-js/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/@shined/open-sdk-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 一个全面的 TypeScript SDK，用于 SHEIN 开放 API 集成，提供 HTTP 请求工具、数据解密方法和灵活的配置管理。
@@ -24,19 +24,19 @@
 ## 安装
 
 ```bash
-npm install shein-open-sdk-js
+npm install @shined/open-sdk-js
 ```
 
 或使用 yarn：
 
 ```bash
-yarn add shein-open-sdk-js
+yarn add @shined/open-sdk-js
 ```
 
 或使用 pnpm：
 
 ```bash
-pnpm add shein-open-sdk-js
+pnpm add @shined/open-sdk-js
 ```
 
 ## 快速开始
@@ -44,7 +44,7 @@ pnpm add shein-open-sdk-js
 ### 基本用法
 
 ```javascript
-const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByToken } = require('shein-open-sdk-js');
+const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByToken } = require('@shined/open-sdk-js');
 
 // 使用配置对象初始化
 const openRequest = new OpenRequest({
@@ -81,7 +81,7 @@ console.log(authResult);
 ### TypeScript 用法
 
 ```typescript
-import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptResponse, decryptSecretKey } from 'shein-open-sdk-js';
+import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptResponse, decryptSecretKey } from '@shined/open-sdk-js';
 
 // 配置接口定义
 const config: OpenRequestConfig = {
@@ -274,7 +274,7 @@ SDK 包含用于解密来自 API 的各种类型加密数据的方法：
 解密加密的事件数据。
 
 ```javascript
-const { decryptEventData } = require('shein-open-sdk-js');
+const { decryptEventData } = require('@shined/open-sdk-js');
 
 const decryptedData = decryptEventData(encryptedEventData, password);
 console.log(decryptedData);
@@ -285,7 +285,7 @@ console.log(decryptedData);
 解密加密的 API 响应。
 
 ```javascript
-const { decryptResponse } = require('shein-open-sdk-js');
+const { decryptResponse } = require('@shined/open-sdk-js');
 
 const decryptedResponse = decryptResponse(encryptedApiResponse, password);
 console.log(decryptedResponse);
@@ -296,7 +296,7 @@ console.log(decryptedResponse);
 解密来自令牌交换响应的加密密钥。
 
 ```javascript
-const { decryptSecretKey } = require('shein-open-sdk-js');
+const { decryptSecretKey } = require('@shined/open-sdk-js');
 
 const decryptedKey = decryptSecretKey(encryptedSecretKey, password);
 console.log(decryptedKey);
@@ -344,7 +344,7 @@ try {
 ### 完整的错误处理示例
 
 ```javascript
-const { OpenRequest, getByToken, decryptEventData, decryptResponse, decryptSecretKey } = require('shein-open-sdk-js');
+const { OpenRequest, getByToken, decryptEventData, decryptResponse, decryptSecretKey } = require('@shined/open-sdk-js');
 
 async function example() {
   try {

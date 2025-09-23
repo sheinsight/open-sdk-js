@@ -1,6 +1,6 @@
 # Shein Open SDK
 
-[![npm version](https://badge.fury.io/js/shein-open-sdk-js.svg)](https://badge.fury.io/js/shein-open-sdk-js)
+[![npm version](https://badge.fury.io/js/@shined/open-sdk-js.svg)](https://badge.fury.io/js/@shined/open-sdk-js)
 [![CI](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml/badge.svg)](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/your-username/@shined/open-sdk-js/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/@shined/open-sdk-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -24,19 +24,19 @@ A comprehensive TypeScript SDK for SHEIN Open API integration, providing HTTP re
 ## Installation
 
 ```bash
-npm install shein-open-sdk-js
+npm install @shined/open-sdk-js
 ```
 
 Or using yarn:
 
 ```bash
-yarn add shein-open-sdk-js
+yarn add @shined/open-sdk-js
 ```
 
 Or using pnpm:
 
 ```bash
-pnpm add shein-open-sdk-js
+pnpm add @shined/open-sdk-js
 ```
 
 ## Quick Start
@@ -44,7 +44,7 @@ pnpm add shein-open-sdk-js
 ### Basic Usage
 
 ```javascript
-const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByToken } = require('shein-open-sdk-js');
+const { OpenRequest, decryptEventData, decryptResponse, decryptSecretKey, getByToken } = require('@shined/open-sdk-js');
 
 // Initialize with configuration object
 const openRequest = new OpenRequest({
@@ -81,7 +81,7 @@ console.log(authResult);
 ### TypeScript Usage
 
 ```typescript
-import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptResponse, decryptSecretKey } from 'shein-open-sdk-js';
+import { OpenRequest, OpenRequestConfig, getByToken, decryptEventData, decryptResponse, decryptSecretKey } from '@shined/open-sdk-js';
 
 // Configuration interface
 const config: OpenRequestConfig = {
@@ -274,7 +274,7 @@ The SDK includes methods for decrypting various types of encrypted data from SHE
 Decrypt encrypted event data.
 
 ```javascript
-const { decryptEventData } = require('shein-open-sdk-js');
+const { decryptEventData } = require('@shined/open-sdk-js');
 
 const decryptedData = decryptEventData(encryptedEventData, password);
 console.log(decryptedData);
@@ -285,7 +285,7 @@ console.log(decryptedData);
 Decrypt encrypted API responses.
 
 ```javascript
-const { decryptResponse } = require('shein-open-sdk-js');
+const { decryptResponse } = require('@shined/open-sdk-js');
 
 const decryptedResponse = decryptResponse(encryptedApiResponse, password);
 console.log(decryptedResponse);
@@ -296,7 +296,7 @@ console.log(decryptedResponse);
 Decrypt encrypted secret keys from token exchange responses.
 
 ```javascript
-const { decryptSecretKey } = require('shein-open-sdk-js');
+const { decryptSecretKey } = require('@shined/open-sdk-js');
 
 const decryptedKey = decryptSecretKey(encryptedSecretKey, password);
 console.log(decryptedKey);
@@ -366,7 +366,7 @@ try {
 ### Complete Example with Error Handling
 
 ```javascript
-const { OpenRequest, getByToken, decryptEventData, decryptResponse, decryptSecretKey } = require('shein-open-sdk-js');
+const { OpenRequest, getByToken, decryptEventData, decryptResponse, decryptSecretKey } = require('@shined/open-sdk-js');
 
 async function example() {
   try {

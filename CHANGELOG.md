@@ -2,13 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-## [1.4.0](https://github.com/sheinsight/open-sdk-js/compare/shein-open-sdk-js-v1.3.0...shein-open-sdk-js-v1.4.0) (2025-09-23)
+## [1.4.0](https://github.com/sheinsight/open-sdk-js/compare/@shined/open-sdk-js-v1.3.0...@shined/open-sdk-js-v1.4.0) (2025-09-23)
 
 
 ### Features
 
 * add release-please configuration for automated NPM publishing ([b556cf6](https://github.com/sheinsight/open-sdk-js/commit/b556cf68082e6362d6148084669be60d29a43c3a))
-* change to non-scoped package name shein-open-sdk-js and update all references ([2e40626](https://github.com/sheinsight/open-sdk-js/commit/2e406260b6cb19ff1b60bd16facf24a8ef6e950f))
+* change to non-scoped package name @shined/open-sdk-js and update all references ([2e40626](https://github.com/sheinsight/open-sdk-js/commit/2e406260b6cb19ff1b60bd16facf24a8ef6e950f))
 * init ([b0dc18d](https://github.com/sheinsight/open-sdk-js/commit/b0dc18d83b21bee7a92eda481ef30e2e15aab9d2))
 * update NPM token reference to OPEN_SDK_JS_NPM_PUBLISH_TOKEN ([1d58efe](https://github.com/sheinsight/open-sdk-js/commit/1d58efe9ceeda918ed261747f4da5500f0165bd3))
 * update package name to @shined/open-sdk-js to resolve NPM organization issue ([c4f4552](https://github.com/sheinsight/open-sdk-js/commit/c4f45520fa5fc9f75a85ab6da260abd9deb672e5))
