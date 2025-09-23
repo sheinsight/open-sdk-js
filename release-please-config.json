@@ -2,11 +2,11 @@
   "packages": {
     ".": {
       "release-type": "node",
-      "package-name": "@sheinsight/open-sdk-js",
+      "package-name": "@shined/open-sdk-js",
       "changelog-sections": [
-        {"type": "feat", "section": "Features"},
-        {"type": "fix", "section": "Bug Fixes"},
-        {"type": "chore", "section": "Miscellaneous", "hidden": false}
+        { "type": "feat", "section": "Features" },
+        { "type": "fix", "section": "Bug Fixes" },
+        { "type": "chore", "section": "Miscellaneous", "hidden": false }
       ]
     }
   }

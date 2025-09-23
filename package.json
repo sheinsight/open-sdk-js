@@ -1,5 +1,5 @@
 {
-  "name": "@sheinsight/open-sdk-js",
+  "name": "@shined/open-sdk-js",
   "version": "1.2.0",
   "description": "A TypeScript SDK for Shein API Tools",
   "main": "lib/index.js",
