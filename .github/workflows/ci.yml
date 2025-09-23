@@ -84,7 +84,7 @@ jobs:
 
       - name: Test demo examples
         run: |
-          pnpm run demo:node
+          pnpm run demo
 
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
