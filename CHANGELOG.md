@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.2.0...open-sdk-js-v1.3.0) (2025-09-23)
+
+
+### Features
+
+* update package name to @shined/open-sdk-js to resolve NPM organization issue ([c4f4552](https://github.com/sheinsight/open-sdk-js/commit/c4f45520fa5fc9f75a85ab6da260abd9deb672e5))
+
 ## [1.2.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.1.0...open-sdk-js-v1.2.0) (2025-09-23)
 
 
