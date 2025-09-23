@@ -12,7 +12,7 @@ Thank you for your interest in contributing to the Shein Open SDK! We welcome co
 
    ```bash
    git clone https://github.com/sheinsight/open-sdk-js.git
-   cd @sheinsight/open-sdk-js
+   cd shein-open-sdk-js
    pnpm install
    ```
 
