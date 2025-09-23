@@ -14,6 +14,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Release Please
         uses: googleapis/release-please-action@v4
         id: release
@@ -22,9 +25,6 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-      - name: Checkout code
-        if: steps.release.outputs.release_created
-        uses: actions/checkout@v4
 
       - name: Setup pnpm
         if: steps.release.outputs.release_created
