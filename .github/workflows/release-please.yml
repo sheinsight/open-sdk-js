@@ -25,7 +25,6 @@ jobs:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
 
-
       - name: Setup pnpm
         if: steps.release.outputs.release_created
         uses: pnpm/action-setup@v2
@@ -56,4 +55,4 @@ jobs:
         if: steps.release.outputs.release_created
         run: pnpm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_PUBLISH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.OPEN_SDK_JS_NPM_PUBLISH_TOKEN }}
