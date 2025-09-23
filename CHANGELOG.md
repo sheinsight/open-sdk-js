@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.1.0...open-sdk-js-v1.2.0) (2025-09-23)
+
+
+### Features
+
+* update NPM token reference to OPEN_SDK_JS_NPM_PUBLISH_TOKEN ([1d58efe](https://github.com/sheinsight/open-sdk-js/commit/1d58efe9ceeda918ed261747f4da5500f0165bd3))
+
+
+### Bug Fixes
+
+* update Release Please workflow to use Node.js 20.x ([b16bc67](https://github.com/sheinsight/open-sdk-js/commit/b16bc678f6c930f9a29d2695cb88573ecd85b918))
+
 ## [1.1.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.0.1...open-sdk-js-v1.1.0) (2025-09-23)
 
 
