@@ -5,7 +5,7 @@
 [![codecov](https://codecov.io/gh/your-username/@shined/open-sdk-js/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/@shined/open-sdk-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A comprehensive TypeScript SDK for SHEIN Open API integration, providing HTTP request utilities, data decryption methods, and flexible configuration management.
+A comprehensive TypeScript SDK for SHEIN Open API integration, providing HTTP request utilities, data decryption methods, and flexible configuration management with NPM publishing support.
 
 [中文文档](README-zh_CN.md)
 
