@@ -8,3 +8,4 @@ export { default as getByToken } from './get-by-token';
 
 // Named exports only to avoid mixing named and default exports
 // Users can import as: import { OpenRequest } from '@shined/open-sdk-js'
+// Version: 1.5.0+ with NPM publishing support
