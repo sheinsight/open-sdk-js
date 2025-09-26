@@ -49,7 +49,11 @@
     "demo:typescript": "npx ts-node demo/typescript-example.ts",
     "clean": "rimraf lib coverage",
     "prepack": "pnpm run clean && pnpm run build",
-    "size": "find lib/esm -name \"*.js\" -exec wc -c {} + | tail -1"
+    "size": "find lib/esm -name \"*.js\" -exec wc -c {} + | tail -1",
+    "release": "node scripts/release.js",
+    "release:patch": "node scripts/release.js --type=patch",
+    "release:minor": "node scripts/release.js --type=minor",
+    "release:major": "node scripts/release.js --type=major"
   },
   "keywords": [
     "shein",

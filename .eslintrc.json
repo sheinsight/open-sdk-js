@@ -24,5 +24,24 @@
     "prefer-const": "error",
     "no-var": "error"
   },
-  "ignorePatterns": ["dist", "node_modules", "*.js", "lib"]
+  "ignorePatterns": ["dist", "node_modules", "lib"],
+  "overrides": [
+    {
+      "files": ["scripts/**/*.js", "*.config.js", "*.config.*.js"],
+      "env": {
+        "node": true,
+        "es2021": true
+      },
+      "parser": "espree",
+      "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "commonjs"
+      },
+      "extends": ["eslint:recommended"],
+      "rules": {
+        "no-console": "off",
+        "no-undef": "off"
+      }
+    }
+  ]
 }
