@@ -1,6 +1,6 @@
 {
   "name": "@shined/open-sdk-js",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A TypeScript SDK for Shein API Tools",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
