@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.5.0...open-sdk-js-v1.6.0) (2025-09-26)
+
+
+### Features
+
+* add version comment to indicate NPM publishing support ([613eef1](https://github.com/sheinsight/open-sdk-js/commit/613eef1762a038f37418bfb5c89c05f3ebbfccff))
+
 ## [1.5.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.4.0...open-sdk-js-v1.5.0) (2025-09-23)
 
 
