@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.1](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.7.0...open-sdk-js-v1.7.1) (2025-09-26)
+
+
+### Bug Fixes
+
+* release version 1.7.1 ([6664c71](https://github.com/sheinsight/open-sdk-js/commit/6664c71a7f723f5f8350ba3013d787b5213bde67))
+
 ## [1.7.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.6.0...open-sdk-js-v1.7.0) (2025-09-26)
 
 
