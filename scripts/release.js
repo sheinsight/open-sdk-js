@@ -103,7 +103,7 @@ const getGitRemotes = () => {
   const remotes = new Set();
 
   result.split('\n').forEach(line => {
-    const match = line.match(/^(\w+)\s+/);
+    const match = line.match(/^([\w-]+)\s+/);
     if (match) {
       remotes.add(match[1]);
     }
