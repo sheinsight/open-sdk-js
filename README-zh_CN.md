@@ -1,8 +1,8 @@
 # Shein Open SDK
 
-[![npm version](https://badge.fury.io/js/@shined/open-sdk-js.svg)](https://badge.fury.io/js/@shined/open-sdk-js)
+[![npm version](https://badge.fury.io/js/@shined%2Fopen-sdk-js.svg)](https://badge.fury.io/js/@shined%2Fopen-sdk-js)
 [![CI](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml/badge.svg)](https://github.com/sheinsight/open-sdk-js/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/your-username/@shined/open-sdk-js/branch/main/graph/badge.svg)](https://codecov.io/gh/your-username/@shined/open-sdk-js)
+[![codecov](https://codecov.io/gh/sheinsight/open-sdk-js/branch/master/graph/badge.svg)](https://codecov.io/gh/sheinsight/open-sdk-js)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 一个全面的 TypeScript SDK，用于 SHEIN 开放 API 集成，提供 HTTP 请求工具、数据解密方法和灵活的配置管理。
