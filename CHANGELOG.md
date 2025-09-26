@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.6.0...open-sdk-js-v1.7.0) (2025-09-26)
+
+
+### Features
+
+* add comprehensive one-click release script with interactive configuration ([5dc7078](https://github.com/sheinsight/open-sdk-js/commit/5dc7078faa222d2ccd917fdd7163c80b1114036a))
+
+
+### Bug Fixes
+
+* correct npm version badge URL encoding and codecov badge configuration ([b222e5c](https://github.com/sheinsight/open-sdk-js/commit/b222e5c7318795f3936562148af3edb32931e9d9))
+* correct npm version badge URL encoding in Chinese README ([684021f](https://github.com/sheinsight/open-sdk-js/commit/684021f57b0d05cbb8b326e9d1eb2c362e945c1f))
+* improve git remote detection to support hyphens in remote names ([5d4a4d0](https://github.com/sheinsight/open-sdk-js/commit/5d4a4d0551f09ab8f2ecfffd8e914d04493f85f1))
+* release version 1.5.1 ([8916f32](https://github.com/sheinsight/open-sdk-js/commit/8916f32e88f2c6d1d9608492838c627a8ccbc126))
+* release version 1.6.1 ([d4ba775](https://github.com/sheinsight/open-sdk-js/commit/d4ba775379bae8cb70c896601979beaf981983da))
+
 ## [1.6.0](https://github.com/sheinsight/open-sdk-js/compare/open-sdk-js-v1.5.0...open-sdk-js-v1.6.0) (2025-09-26)
 
 
